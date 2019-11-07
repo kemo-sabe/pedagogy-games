@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 900;
+}
+
+html {overflow: hidden;}
+
+#playArea {
+	position: relative;
+	width:  1216px;
+	height: 722px;
+}
+
+#canvas {
+	position: absolute;
+	border: 1px solid #d3d3d3;
+	background-color: #f1f1f1;
+}
+
+#canvas-container {
+	width: 100vh;
+	height: auto;
+	z-index: 1;
+	position:absolute;
+}
