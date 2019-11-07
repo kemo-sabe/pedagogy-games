@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 900;
+}
+
+html {overflow: hidden;}
+
+#playArea {
+	position: relative;
+	width:  1216px;
+	height: 722px;
+}
+
+#canvas {
+	position: absolute;
+	border: 1px solid #d3d3d3;
+	background-color: #f1f1f1;
+}
+
+#canvas-container {
+	width: 100vh;
+	height: auto;
+	z-index: 1;
+	position:absolute;
+}
+
+/*	*******************	RULES DURING GAME ******************* */
+#rules {
+	display: none;
+	position: absolute;
+	width: 120vh;
+	height: 100vh;
+	margin: 0 auto;
+	padding-top: 2vw;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	cursor: default;
+	background: rgba(0,0,0,0.85);
+	z-index: 2;
+}
+
+#rules p {
+	margin-top: 2vh;
+	color: #fff;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 2vh;
+}
+
+#rules p:nth-child(2) {
+	text-align: center;
+}
+	
+.closeRuleBtn {
+	position: absolute;
+	top: 2vh;
+	right: 5vh;
+	padding: 0px;
+	text-decoration: none;
+	font-size: 7vh;
+	color: #818181;
+}
+
+.closeRuleBtn:hover {
+	color: #f1f1f1;
+}
+
+/*	*******************	GAME SIDEBAR NAVIGATION ******************* */
+#sideNav {
+	display: none;
+}
+
+#sideNav p {
+	position: absolute;
+	left: -9vh;
+	transition: 0.3s;
+	padding: 1vh;
+	width: 10vh;
+	text-decoration: none;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 2vh;
+	color: white;
+	border-radius: 0 5px 5px 0;
+	z-index: 1;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+#sideNav p:hover {
+	left: 0vh;
+	cursor: pointer;
+}
+
+#goBack {
+	top: 80vh;
+	background-color: #f44336;
+}
+
+#goRules {
+	top: 88vh;
+	background-color: #2196F3;
+}
+
+/*	*******************	SOLVE THE PUZZLE POP UP ******************* */
+#solveInput {
+	display: none;
+	width: 50vw;
+	height: auto;
+	position: absolute;
+	top: 85vh;
+	left: 40vh;
+	color: #000000;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 4vh;
+	border-radius: 1rem;
+	padding-left: 2rem;
+}
+
+#solveSubmit {
+	display: none;
+	width: 52.5vw;
+	height: auto;
+	position: absolute;
+	top: 92vh;
+	left: 40vh;
+	color: #000000;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 4vh;
+	border-radius: 1rem;
+	background-color: cornflowerblue;
+	border: none;
+	box-shadow: 3px 3px 5px #fff;
+}
+
+#solveSubmit:hover {
+	background-color: #3CA899;
+	box-shadow: 0px 0px 0px #000;
+	cursor: pointer;
+}
+
+/*	*******************	NEW GAME INPUTS ******************* */
+/*time of questions*/
+#inputQuestions {
+	display: none;
+	width: 18.3vw;
+	height: auto;
+	position: absolute;
+	top: 55vh;
+	left: 72vh;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 1.2vw;
+	text-align: center;
+	border-radius: 1rem;
+	background-color: cornflowerblue;
+	border-color: cornflowerblue;
+	box-shadow: 3px 3px 5px #000000;
+	padding-bottom: 0.5rem;
+}
+
+.inputQuestions {
+	cursor: pointer;
+}
+
+/*players or teams*/
+#inputPlayers {
+	display: none;
+	width: 18.3vw;
+	height: auto;
+	position: absolute;
+	top: 63vh;
+	left: 72vh;
+	color: #000000;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 2vw;
+	text-align: center;
+	border-radius: 1rem;
+	background-color: cornflowerblue;
+	border-color: cornflowerblue;
+	box-shadow: 3px 3px 5px #000000;
+	padding-bottom: 0.5rem;
+}
+
+.inputPlayers {
+	cursor: pointer;
+}
+
+/*number of players*/
+#optionPlayers {
+	display: none;
+	width: 17vw;
+	height: 4vh;
+	position: absolute;
+	top: 70vh;
+	left: 72vh;
+	color: #000000;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 2vh;
+	border-radius: 1rem;
+	padding-left: 1rem;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+/*start game button*/
+#optionSave {
+	display: none;
+	width: 10vw;
+	height: auto;
+	position: absolute;
+	top: 86vh;
+	left: 90vh;
+	color: #000000;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 4vh;
+	text-shadow: 3px 3px 5px rgba(38,38,38,0.7);
+	border-radius: 1rem;
+	background-color: cornflowerblue;
+	border: none;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+#optionSave:hover {
+	background-color: #3CA899;
+	box-shadow: 0px 0px 0px #000;
+	cursor: pointer;
+	border-radius: 2rem;
+}
+
+/*back to main menu button*/
+#optionBack {
+	display: none;
+	width: 10vw;
+	height: auto;
+	position: absolute;
+	top: 86vh;
+	left: 69vh;
+	color: #000000;
+	font-family: "Arial Rounded MT", sans-serif;
+	font-size: 4vh;
+	text-shadow: 3px 3px 5px rgba(38,38,38,0.7);
+	border-radius: 1rem;
+	background-color: cornflowerblue;
+	border: none;
+	box-shadow: 3px 3px 5px #000000;
+}
+
+#optionBack:hover {
+	background-color: #3CA899;
+	box-shadow: 0px 0px 0px #000;
+	cursor: pointer;
+	border-radius: 2rem;
+}
